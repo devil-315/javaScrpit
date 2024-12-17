@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 500px;
+      background-color: #ccc;
+      color: #fff;
+      text-align: center;
+      font-size: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script src="./lodash.min.js"></script>
+  <script>
+    //利用防抖实习性能优化
+    const box = document.querySelector('.box')
+    let i = 1
+    function mouseMove(){
+      box.innerHTML = i++
+    }
+    //方法一：利用lodash库实现
+    //语法：_.throttle(fun,时间)
+    // box.addEventListener('mousemove',_.throttle(mouseMove,3000))
+    //方法二：手写一个防抖函数--利用定时器（setTimeout）
+    //1.声明定时器变量
+    //2.每次鼠标移动（事件触发）的时候要先判断是否有定时器，如果有要先清除以前的定时器
+    //3.如果没有定时器，则开启定时器，存入定时器变量里面
+    //3.1定时器里面写函数调用
+    //3.2定时器里面要把定时器清空
+    function throttle(fn,t){
+      let timer = null
+      return function(){
+        if(!timer){
+          timer = setTimeout(function(){
+            fn()
+            //在setTimeout 中是无法删除定时器的，因为定时器还在运作，所有使用timer = null 而不是clearTimeout(timer)
+            timer = null //清空定时器       
+         },t)
+        }
+      }
+    }
+    box.addEventListener('mousemove',throttle(mouseMove,3000))
+  </script>
+</body>
+
+</html>

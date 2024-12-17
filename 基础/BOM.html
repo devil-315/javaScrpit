@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <style>
+    span{
+      color: red;
+    }
+  </style> -->
+  <!-- <script>
+    // 检测 userAgent（浏览器信息）
+    (function () {
+      const userAgent = navigator.userAgent
+      // 验证是否为Android或iPhone
+      const android = userAgent.match(/(Android);?[\s\/]+([\d.]+)?/)
+      const iphone = userAgent.match(/(iPhone\sOS)\s([\d_]+)/)
+      // 如果是Android或iPhone，则跳转至移动站点
+      if (android || iphone) {
+        location.href = 'https://www.baidu.com/'
+      }})();
+  </script> -->
+</head>
+<body>
+  <button>后退</button>
+  <button>前进</button>
+  <script>
+    const back = document.querySelector('button:first-child')
+    const forward = back.nextElementSibling
+    //后退一步
+    back.addEventListener('click',function(){
+      history.back()
+    })
+    //前进一步
+    forward.addEventListener('click',function(){
+      history.forward()
+    })
+  </script>
+  <!-- 这是pc端 -->
+ <!--  <form action="">
+    <input type="text" name="username">
+    <input type="password" name="pwd">
+    <button>提交</button>
+  </form>
+
+  <a href="#/my">我的</a>
+  <a href="#/friend">关注</a>
+  <a href="#/download">下载</a>
+  <button class="reload">刷新</button>
+  <script>
+    // console.log(window.location);
+    // console.log(location.href);
+    const reload = document.querySelector('.reload')
+    reload.addEventListener('click',function(){
+      //f5
+      // location.reload()
+      //ctrl + f5 强制刷新
+      location.reload(true)
+    })
+    console.log(navigator.userAgent);
+    
+  </script> -->
+  <!-- <a href="https://www.baidu.com/">支付成功<span>5</span>秒钟之后跳转到首页</a>
+  <script>
+    //1.获取元素
+    const a = document.querySelector('a')
+    //2.开启定时器
+    //3.声明倒计时变量
+    let num = 5
+    let timerId = setInterval(function(){
+      num--
+      a.innerHTML = `
+        支付成功<span>${num}</span>秒钟之后跳转到首页
+      `
+      //如果num === 0则停止定时器，并且完成支付功能
+      if(num === 0){
+        clearInterval(timerId)
+        //4.跳转 Loaction.href
+        location.href = 'https://www.baidu.com/'
+      }
+    },1000)
+  </script> -->
+</body>
+</html>

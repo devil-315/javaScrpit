@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* const arr = [100,60,80]
+    //数组解构 赋值
+    const [a,b,c] = arr
+    console.log(a);
+    console.log(b);
+    console.log(c); */
+    /* let a = 1
+    let b = 2;
+    [a,b] = [b,a]
+    console.log(a,b); */
+    //多维数组解构
+    /* const [a,b,[c,d]] = [1,2,[3,4]]
+    console.log(a); //1
+    console.log(b); //2
+    console.log(c); //3
+    console.log(d); //4 */
+    /*  const {uname,age} = {uname:'devil',age:18}
+     console.log(uname);
+     console.log(age); */
+/*     //对象解构的变量名，可以重新改名 旧变量名：新变量名
+    const { uname: name, age } = { uname: 'devil', age: 18 }
+    console.log(name);
+    console.log(age);  */
+    /* const pig = [
+      {
+        name:'佩奇',
+        age:6
+      }
+    ]
+    const [{name:uname,age}] = pig
+    console.log(uname);
+    console.log(age); */
+/*     const pig = {
+      name:'佩奇',
+      family:{
+        mother:'猪妈妈',
+        father:'猪爸爸',
+        sister:'朱姐姐'
+      },
+      age:6
+    }
+    //多级对象解构
+    const {name,family:{mother,father,sister}} = pig
+    console.log(name);
+    console.log(mother);
+    console.log(father);
+    console.log(sister); */
+    const arr = ['red','green','blue']
+    arr.forEach(function(item,index){
+      console.log(item);
+      console.log(index);
+    })
+  </script>
+</body>
+
+</html>

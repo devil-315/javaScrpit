@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //单分支语句
+    /* if(true){
+      console.log('执行语句');
+      
+    } */
+
+    /* //1.用户输入
+    let score = +prompt('请输入成绩：')
+    //2.进行判读输出
+    if( score > 700){
+      alert('恭喜考入清华')
+    } */
+
+    //1.用户输入
+    // let name = prompt('请输入用户名：')
+    // let pwd = prompt('亲输入密码：')
+    // //2.判读输出
+    // if(name === 'devil' && pwd === '123456'){
+    //   alert('登录成功')
+    // }else{
+    //   alert('登录失败')
+    // }
+
+    /* //1.用户输入
+    let year = +prompt('请输入年份：')
+    //2.判读输出
+    if(year % 4 === 0 && year % 100 !== 0 || year % 400 === 0){
+      alert(`${year}是闰年`)
+    }else{
+      alert(`${year}是平年`)
+    } */
+
+    /* let sum = 3 > 5 ? 3 : 5
+    alert(sum) */
+
+    /* //1.用户输入
+    let num1 = +prompt('请输入第一个数：')
+    let num2 = +prompt('请输入第二个数：')
+    //2.判读输出 输出最大值
+    alert(num1 > num2 ? num1 : num2 ) */
+
+    /* //1.用户输入
+    let num = +prompt('请输入一个数：')
+    //2.判读输出
+    num = num > 10 ? num : '0' + num
+    alert(num) */
+
+    /* let num = +prompt('请选择：')
+    switch(num){
+      case 1:
+        console.log('1')
+        break
+      case 2:
+        console.log('2')
+        break
+      case 3:
+        console.log('3')
+        break
+      case 4:
+        console.log('4')
+        break
+      default:
+      console.log('错误')
+      break
+    } */
+
+    //简单计算器
+    //1.用户输入
+    let num1 = +prompt('请输入第一个数：')
+    let num2 = +prompt('请输入第二个数：')
+    let sp= prompt('请选择+ - * /：')
+
+    //2.判读输出
+    switch(sp){
+      case '+':
+        alert(`两个数的加法操作是：${num1 + num2}`)
+        break
+      case '-':
+        alert(`两个数的减法操作是：${num1 - num2}`)
+        break
+      case '*':
+        alert(`两个数的乘法操作是：${num1 * num2}`)
+        break
+      case '/':
+        alert(`两个数的除法操作是：${num1 / num2}`)
+        break
+      default:
+        alert('你干啥，请输入+ - * /')
+    }
+  </script>
+</body>
+</html>

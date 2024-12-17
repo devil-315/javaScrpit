@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // //声明一个字符串
+    // let str = '<a href="http://www.atguigu.com">尚硅谷</a>'; 
+    // //提取url 和 【标签文本】
+    // const reg = /<a href="(.*)">(.*)<\/a>/; 
+    // //执行
+    // const result = reg.exec(str)
+    // console.log(result);
+    // console.log(result[1]);
+    // console.log(result[2]);
+    //声明一个字符串
+    // let str = '<a href="http://www.atguigu.com">尚硅谷</a>'; 
+    // //提取url 和 【标签文本】
+    // const reg = /<a href="(?<url>.*)">(?<text>.*)<\/a>/; 
+    // const result = reg.exec(str)
+    // console.log(result);
+    // console.log(result.groups.url);
+    // console.log(result.groups.text);
+    //声明字符串 
+    // let str = 'JS5211314你知道么555啦啦啦'; 
+    // //正向断言 
+    // const reg = /\d+(?=啦)/; 
+    // // const reg = /(?<=么)\d+/; 
+    // const result = reg.exec(str); 
+    // console.log(result);
+    let str = ` 
+      <ul> 
+        <li> 
+          <a>肖生克的救赎</a> 
+          <p>上映日期: 1994-09-10</p> 
+        </li> 
+        <li> 
+          <a>阿甘正传</a> 
+          <p>上映日期: 1994-07-06</p> 
+        </li> 
+      </ul>`; 
+      //声明正则
+      const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/sg
+      //调用方法
+      const result = str.matchAll(reg)
+      console.log(result);
+      for(let v of result){
+        console.log(v);
+      }
+      const arr = [...result]
+      console.log(arr);
+      
+    // const reg = /<li>\s+<a>(.*?)<\/a>\s+<p>(.*?)<\/p>/
+    // const result = reg.exec(str)
+    // console.log(result);
+    //声明正则 
+    // const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/gs; 
+    // //执行匹配 
+    // // const result = reg.exec(str); 
+    // let result; 
+    // let data = []; 
+    // while(result = reg.exec(str)){ 
+    //   data.push({title: result[1], time: result[2]}); 
+    // } 
+    // //输出结果 
+    // console.log(data);
+    // console.log([1, [2, 3, [4, 5]]].flat(Infinity ));
+    // let s = Symbol('hello')
+    // console.log(s.description);
+    
+  </script>
+</body>
+</html>

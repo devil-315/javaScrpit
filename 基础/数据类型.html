@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 弱数据类型语言 ， 只有赋值了才知道是什么数据类型
+    // let num = 10
+    // let num2 = 10.1
+    // let num3 = -1
+    // document.write(typeof num)
+    // document.write(typeof num2)
+    // document.write(typeof num3)
+
+    // let PI = 3.14
+    // let r = prompt('请输入半径') 
+    // let s = PI * r * r
+    // document.write(s)
+
+    // //NaN 代表一个计算错误
+    // console.log('devil' - 2);
+    // console.log(NaN + 2);
+    
+    // document.write(1 + 1) //2
+    // document.write('1' + 1) //11
+
+    // let age = 18
+    // document.write(`我今年${age}岁了`)
+
+    /* let name = prompt('请输入姓名')
+    let age = prompt('请输入年龄')
+    document.write(`大家好，我叫${name},我今年${age}岁了`) */
+
+    //true false 是布尔型字面量
+    // let isCool = true
+    // console.log(isCool);
+    
+    // let num 
+    // console.log(typeof num);
+
+   /*  let obj = null
+    console.log(obj); //null
+    console.log(obj + 1);//1 */
+    
+    /* console.log('11' - 11); //0
+    console.log('1' * 1); //1
+    console.log(typeof +'12');//number
+    console.log(+'11' + 11); //22 */
+
+    /* let num = +prompt('输入数字')
+    console.log(typeof num); //number
+    
+    console.log(parseInt('12px')); //12
+    console.log(parseInt('12.34px'));//12
+    console.log(parseInt('12.94px'));//12
+    
+    console.log(parseFloat('12px'));//12
+    console.log(parseFloat('12.34px'));//12.34 */
+
+    //通过 + 号 进行隐式转换为数字型
+    let num1 = +prompt('请输入数字1')
+    let num2 = +prompt('请输入数字2')
+    
+    // alert(num1 + num2)
+    alert(`两个数字相加的和${num1+num2}`)
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const obj = {
+      uname: 'devil',
+      age: 18,
+      family:{
+        baby:'baby'
+      }
+    }
+/*     const o = {...obj}
+    console.log(o);
+    o.age = 20
+    console.log(o.age); //20
+    console.log(obj.age); //18 */
+    const o = {}
+    Object.assign(o,obj)
+    o.age = 20
+    o.family.baby = 'gril'
+    console.log(o.age,o.family.baby);//20 'gril'
+    console.log(obj.age,obj.family.baby);//18 'gril'
+    
+  </script>
+</body>
+</html>

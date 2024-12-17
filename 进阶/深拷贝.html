@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div></div>
+  <script src="./lodash.min.js"></script>
+  <script>
+    const obj = {
+      uname: 'devil',
+      age: 18,
+      hobby: ['篮球','打瓦'],
+      family:{
+        baby:'baby',
+        wife:'刘亦菲'
+      }
+    }
+    const o = JSON.parse(JSON.stringify(obj))
+    o.family.wife = '迪丽热巴'
+    console.log(obj);
+    
+    /* const o = _.cloneDeep(obj)
+    console.log(o);
+    o.family.wife = '迪丽热巴'
+    console.log(obj); */
+    
+/*     const o = {}
+    //拷贝函数
+    function deepCopy(newObj,oldObj){
+      for(let k in oldObj){
+        //处理数组问题  一定先写数组 在写 对象 不能颠倒
+        if(oldObj[k] instanceof Array){
+          newObj[k] = []
+          //  newObj[k] 接收 []  hobby
+          //  oldObj[k]   ['乒乓球', '足球']
+          deepCopy(newObj[k],oldObj[k])
+        }else if(oldObj[k] instanceof Object){
+          //console.log([1,2] instanceof Object);//true
+          //因为数组 属于对象 ，所有将对数组的判断放在前面
+          //  k  属性名 uname age    oldObj[k]  属性值  18
+          // newObj[k]  === o.uname  给新对象添加属性
+          newObj[k] = {}
+          deepCopy(newObj[k],oldObj[k])
+        }else{
+          newObj[k] = oldObj[k]
+        }
+      }
+    }
+    deepCopy(o,obj)  // 函数调用  两个参数 o 新对象  obj 旧对象
+    console.log(o);
+    o.age = 20
+    o.hobby[0] = '游泳'
+    o.family.wife = '柳岩'
+    console.log(obj); */
+
+    
+  </script>
+</body>
+</html>

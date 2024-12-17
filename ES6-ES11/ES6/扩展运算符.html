@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <script>
+    const divs = document.querySelectorAll('div')
+    const divArr = [...divs]
+    console.log(divArr);//[div, div, div]
+    let obj1 = {
+      a: 123
+    };
+    let obj2 = {
+      b: 456
+    };
+    let obj3 = {
+      c: 789
+    };
+    let obj = { ...obj1, ...obj2, ...obj3 };
+    console.log(obj);
+  </script>
+</body>
+</html>

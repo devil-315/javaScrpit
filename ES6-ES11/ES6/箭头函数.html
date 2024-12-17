@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      background-color: #58a;
+    }
+  </style>
+</head>
+<body>
+  <div class="ad"></div>
+  <script>
+    //获取元素
+    // let ad = document.querySelector('.ad')  
+    // //绑定事件
+    // // ad.addEventListener('click',function(){
+    // //   //保存this的值
+    // //   let _this = this
+    // //   //定时器
+    // //   setTimeout(function(){
+    // //     // console.log(this);//window
+    // //     _this.style.background = 'pink'
+    // //   },2000)
+    // // })
+    // ad.addEventListener('click',function(){
+    //   setTimeout(() => {
+    //     this.style.background = 'pink'
+    //   },2000)
+    // })
+    const arr = [1,6,9,45,20,70]
+    const result = arr.filter(item => item % 2 === 0)
+    console.log(result);
+    
+  </script>
+</body>
+</html>

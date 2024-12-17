@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* fn()
+    function fn(){
+      console.log('函数提升');
+      
+    } */
+    /* let sum = 0
+    function getSum() {
+      //arguments 动态参数 只存在于函数里面
+      console.log(arguments);
+      for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i]
+      }
+      return sum
+    }
+    console.log(getSum(2, 3, 4)); */
+   /*  function getSum(a,b,...arr){
+      console.log(arr);
+      
+    }
+    getSum(1,2)
+    getSum(1,2,3,4,5) */
+    /* const fn = x => {
+      console.log(x);
+      
+    }
+    fn(3) */
+    /* const fn = x => console.log(x);
+    fn(19) */
+    /* const fn = x => x+x
+    console.log(fn(9)); */
+    /* const fn = uname => ({uname:uname})
+    console.log(fn('devil')); */
+    /* const getSum = (...arr) => {
+      let sum = 0
+      for(let i = 0;i < arr.length;i++){
+        sum += arr[i]
+      }
+      return sum
+    }
+    console.log(getSum(1,2,3,4)); */
+   /*  const fn= () => console.log(this);
+    fn() */
+    const obj = {
+      uname: 'devil',
+      sayHi: function(){
+        console.log(this);
+        
+        let i =0
+        const hi = () => {
+          console.log(this);
+        }
+        hi()
+      }
+    }
+    obj.sayHi()
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <div data-id="1">1</div>
+  <div data-id="2">2</div>
+  <div data-id="3">3</div>
+  <div data-id="4">4</div>
+  <div data-id="5">5</div>
+  <script>
+    const one = document.querySelector('div')
+    console.log(one.dataset.id);
+    console.log(one.dataset.spm);
+    
+    
+  </script> -->
+  <script>
+    // setInterval(函数，间隔时间)、
+    setInterval(function(){
+      console.log('一秒执行一次');
+    },100)
+
+    function fn(){
+      console.log('一秒执行一次');
+    }
+    //开启定时器
+    let n = setInterval(fn,100)
+    console.log(n);
+    console.log(typeof n); //number
+    //关闭定时器
+    clearInterval(n)
+  </script>
+  <!-- <input type="text" value="电脑"> -->
+  <!--  <input type="checkbox" name="" id="">
+   <button disabled>按钮</button>
+  <script>
+    const ipt = document.querySelector('input')
+    ipt.checked = true
+
+    const button = document.querySelector('button')
+    button.disabled = false
+    /* //1.获取元素
+    const uname = document.querySelector('input')
+    //2.获取值
+    console.log(uname.value);
+    console.log(uname.innerHTML);
+    //3.设置表单的值
+    uname.value = '我要买电脑'
+    console.log(uname.type);
+    uname.type = 'password' */
+  </script> -->
+</body>
+<!-- <style>
+  /* .box{
+    width: 20px;
+    height: 20px;
+  } */
+  body{
+    background: url(./images//desktop_1.jpg) no-repeat top center/cover;
+  }
+</style>
+<body>
+  <script>
+    //取得 N~M 的随机整数
+    function getRandom(N,M){
+      return Math.floor(Math.random() * (M - N + 1) + N)
+    }
+    //随机数
+    const random = getRandom(1,10)
+    //body是唯一的标签 可以直接得到
+    document.body.style.backgroundImage = `url(./images//desktop_${random}.jpg)`
+  </script> -->
+  <!-- <style>
+    .pink {
+            background: pink;
+            color: hotpink;
+        }
+  </style>
+  <div class="box">你好</div>
+  <script>
+    //1.获取元素
+    const div = document.querySelector('.box')
+    /* //2.添加类型
+    div.className = 'pink' */
+    //2.1修改
+    // div.classList.add('active')
+    // //2.2删除
+    // div.classList.remove('box')
+    //2.3切换
+    div.classList.toggle('active')
+  </script> -->
+  <!-- <div class="box">我是文字内容</div> -->
+  <!-- <p id="nav">导航栏</p>
+  <ul>
+    <li>测试1</li>
+    <li>测试2</li>
+    <li>测试3</li>
+  </ul> -->
+ <!--  <img src="./images/1.webp" alt="">
+  <script>
+    //取得 N~M 的随机整数
+    function getRandom(N,M){
+      return Math.floor(Math.random() * (M - N + 1) + N)
+    }
+    //1.获取图片对象
+    const img = document.querySelector('img')
+    //2.得到随机序号
+    const random = getRandom(1,6)
+    //3.更换路径
+    img.src = `./images/${random}.webp`
+  </script> -->
+  <!-- <div class="box">内容</div>
+  <script>
+    //1.获取元素
+    const box = document.querySelector('.box')
+    //2.修改样式
+    box.style.width = '30px'
+    box.style.backgroundColor = 'pink'
+  </script> -->
+<!--   <script>
+    //1.获取图片元素
+    const img = document.querySelector('img')
+    //2.修改图片对象的属性 对象.属性 = 值
+    img.src = './images/2.webp'
+    img.title = '帅哥'
+  </script> -->
+  <!--   /* //1.获取匹配的第一个元素
+    // const box = document.querySelector('div')
+    const box = document.querySelector('.box')
+    console.log(box);
+    // const nav = document.querySelector('p')
+    const nav = document.querySelector('#nav')
+    console.log(nav);
+
+    //1.获取第一个 ul li
+    // const li = document.querySelector('ul li:first-child')
+    const li = document.querySelector('li')
+    console.log(li);
+    //2.获取所有的 li
+    // const lis = document.querySelectorAll('ul li')
+    const lis = document.querySelectorAll('li')
+    console.log(lis);
+    for(let i = 0;i < lis.length ; i++){
+      console.log(lis[i]);
+    } */
+
+   /*  //1.获取元素
+    const box = document.querySelector('.box')
+    //2.修改文字内容， 对象.innerText 属性
+    console.log(box.innerText); //获取文字内容
+    // box.innerText = '我是一个盒子' //修改文字内容
+    box.innerText = '<h4>嗨~ 我叫韩梅梅！</h4>' //不解析标签
+    box.innerHTML = '<h4>嗨~ 我叫韩梅梅！</h4>' */ -->
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // //手机
+    // function Phone(brand,price){
+    //   this.brand = brand
+    //   this.price = price
+    // }
+    // //添加方法
+    // Phone.prototype.call = function(){
+    //   console.log('我可以打电话！');
+    // }
+    // //实例化对象
+    // let Huawei = new Phone('华为',5999)
+    // Huawei.call()
+    // console.log(Huawei);
+    // class Phone{
+    //   //构造方法
+    //   constructor(brand,price){
+    //     this.brand = brand
+    //     this.price = price
+    //   }
+    //   //方法必须使用该语法，不能用ES5的对象完整形式
+    //   call(){
+    //     console.log('call');
+        
+    //   }
+    // }
+    // let onePlue = new Phone("1+",1999)
+    // console.log(onePlue);
+    // onePlue.call()
+    /* class Phone {
+      
+    }
+    Phone.name = '手机'
+    Phone.change = function(){
+      console.log('I can change');
+    }
+    Phone.prototype.size = '5.5inch'
+    let iphone = new Phone()
+    console.log(iphone.name); //undefined
+    // iphone.change() //报错 ： iphone.change is not a function
+    console.log(iphone.size); //5.5inch */
+    class Phone{
+      //静态属性
+      static name = '手机'
+      static change(){
+        console.log('I can change');
+      }
+    }
+    let iphone = new Phone()
+    console.log(iphone.name);//undefined
+    console.log(Phone.name);//手机
+    // iphone.change() //报错 ： iphone.change is not a function
+    Phone.change() //I can change
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let PageHandler = {
+    id: 123,
+    init: function () {
+        // 箭头函数没有this的指向，箭头函数内部的this值只能通过查找作用域链来确定
+
+        // 如果箭头函数被一个非箭头函数所包括，那么this的值与该函数的所属对象相等，否则 则是全局的window对象
+        document.addEventListener('click', (event) => {
+            console.log(this);//PageHandler
+            this.doSomeThings(event.type);
+        }, false);
+    },
+    doSomeThings: function (type) {
+        console.log(`事件类型:${type},当前id:${this.id}`);
+    }
+}
+PageHandler.init();
+  </script>
+</body>
+</html>

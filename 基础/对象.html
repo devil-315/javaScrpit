@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* //1.声明对象
+    let devil = {
+      uname: 'devil',
+      age: 18,
+      gender: '女'
+    }
+    console.log(devil);
+    devil.gender = '男'
+    console.log(devil.gender);
+    devil.body = 'strong'
+    console.log(devil.body);
+    delete devil.body
+    console.log(devil); */
+    
+   /*  let obj = {
+      uname: 'devil',
+      age: 18,
+      gender: '男'
+    }
+    for(let k in obj){
+      // console.log(obj.k); 这种方式是错误的
+      console.log(obj[k]);
+    } */
+   /* console.log(Math.PI);
+   
+   console.log(Math.ceil(2.1));
+   console.log(Math.floor(1.9));
+
+   console.log(Math.round(4.5));
+   console.log(Math.round(4.4));
+
+   console.log(Math.max(1,2,3,4,5,6));
+   console.log(Math.min(1,2,3,4,5,6));
+   
+   console.log(Math.abs(-1)); */
+   
+   /* //取 N ~ M 的整数
+   function getRandom(N,M){
+    return Math.floor(Math.random() * (M - N + 1) + N)
+   }
+   console.log(getRandom(4,8)); */
+
+   /* let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+   //1.得到一个随机数，作为数组的索引号， 这个随机数 0~6
+   let random = Math.floor(Math.random() * arr.length)
+   //2.页面输出数组里面的元素
+   document.write(arr[random])
+   //3. splice(起始位置(下标), 删除几个元素)
+   arr.splice(random,1)
+   document.write(`<br>`+arr) */
+
+   /* //1.随机生成一个数字 1~10
+   //取 N ~ M的随机整数
+   function getRandom(N,M){
+    return Math.floor(Math.random() * (M - N +1) + N)
+   }
+   let random = getRandom(1,10)
+   //开关变量
+   let flag = true
+   //设定次数
+   for(let i = 1;i <= 3;i++ ){
+    //2.用户输入一个值
+    let num = +prompt('请输入你猜的数字：')
+    //3.判读输出
+    if(num > random){
+      alert('猜大了')
+    }else if(num < random){
+      alert('猜小了')
+    }else{
+      alert('恭喜你猜对了')
+      flag = false
+      break
+    }
+   }
+   if(flag){
+      alert('次数已经用完')
+    } */
+
+    //1.自定义随机颜色函数
+    function getRandomColor(flag = true){
+      //3.如果是true 则返回#ffffff
+      if(flag){
+        let str = '#'
+        let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+        for(let i = 1;i <= 6 ;i++){
+          let random = Math.floor(Math.random() * arr.length)
+          str += arr[random]
+        }
+        return str
+      }else{
+        //否则是false,则返回rgb(255,255,255)
+        let r = Math.floor(Math.random() * 256)
+        let g = Math.floor(Math.random() * 256)
+        let b = Math.floor(Math.random() * 256)
+        return `rgb(${r},${g},${b})`
+      }
+    }
+    //2.调用函数getRandomColor(布尔值)
+    console.log(getRandomColor(true)); //十六进制的颜色
+    console.log(getRandomColor(false));//rgb型颜色
+    console.log(getRandomColor());   
+  </script>
+</body>
+</html>

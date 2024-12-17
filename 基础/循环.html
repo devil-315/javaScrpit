@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span{
+      display: inline-block;
+      width: 135px;
+      padding:  5px 10px;
+      border: 1px solid pink;
+      margin:  2px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px rgba(255, 193, 203, 4);
+      background-color: #daee75;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    /* let num = 10
+    while(num > 0){
+      document.write('月薪10w')
+      num--
+    } */
+   /* let sum = 0
+   let i = 2
+   while(i <= 100){
+    sum += i
+    i += 2
+   }
+   console.log(sum); */
+  /*  let money = 100
+   //1.开始循环
+   while(true){
+    let re = +prompt(`
+    请选择：
+    1.存钱
+    2.取钱
+    3.查看余额
+    4.退出
+    `)
+    //2.如果用户输入的 4 则退出循环，break
+    if(re === 4){
+      break
+    }else{
+      switch(re){
+        case 1:
+          let cun = +prompt('存多少钱：')
+          money += cun
+          break
+        case 2:
+          let qu = +prompt('取多少钱：')
+          money -= qu
+          break
+        case 3:
+          alert(`现在有${money}w元`)
+          break
+      }
+    }
+   } */
+
+  /*  for (let i = 0; i < 3.3; i++) {
+    document.write('月薪10w')
+   } */
+
+   /* for(let i = 1;i <= 9;i++){
+      for(let j = 1; j <= i;j++){
+        document.write(`<span>${j}*${i}=${i*j}</span>`)
+      }
+       document.write('<br>')
+   } */
+
+  /* let arr = [2,6,1,7,4]
+  //1.求和的变量 sum
+  let sum = 0
+  for(let i = 0;i < arr.length ; i++){
+    sum += arr[i]
+  }
+  let avg = sum / arr.length
+  document.write(`和为${sum},平均值为${avg}`) */
+  /* let arr = [2,6,1,77,52,25,7]
+  for(let i = 0;i < arr.length - 1;i++){
+    for(let j = 0;j < arr.length - i - 1;j++){
+      if(arr[j] > arr[j+1]){
+        let temp = arr[j]
+        arr[j] = arr[j+1]
+        arr[j+1] = temp
+      }
+    }
+  }
+  document.write(arr[0]+ '<br>'+arr[arr.length - 1]) */
+  
+</script>
+</body>
+</html>

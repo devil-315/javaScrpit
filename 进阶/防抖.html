@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .box {
+    width: 500px;
+    height: 500px;
+    background-color: #ccc;
+    color: #fff;
+    text-align: center;
+    font-size: 100px;
+  }
+</style>
+<body>
+  <div class="box"></div>
+  <script src="./lodash.min.js"></script>
+  <script>
+    //利用防抖实习性能优化
+    const box = document.querySelector('.box')
+    let i = 1
+    function mouseMove(){
+      box.innerHTML = i++
+    }
+    //方法一：利用lodash库实现
+    box.addEventListener('mousemove',_.debounce(mouseMove,500))
+  </script>
+</body>
+</html>

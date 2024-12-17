@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* //要存储一个名字 uname 
+    localStorage.setItem('uname','devil')
+    console.log(localStorage.getItem('uname'));
+    localStorage.removeItem('uname')
+    localStorage.setItem('uname','damowang')
+    console.log(localStorage.getItem('uname'));
+    localStorage.setItem('age',18)
+    console.log(localStorage.getItem('age')); */
+    const goods = {
+      name: '小米',
+      price: 1999
+    }
+    // localStorage.setItem('goods',goods)
+    // console.log(localStorage.getItem('goods'));
+
+    localStorage.setItem('goods',JSON.stringify(goods))
+    //console.log(localStorage.getItem('goods'));
+    //console.log(typeof localStorage.getItem('goods')); //string
+    console.log(JSON.parse(localStorage.getItem('goods')));
+    localStorage.removeItem('goods')
+    
+  </script>
+</body>
+</html>
